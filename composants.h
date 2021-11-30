@@ -13,7 +13,7 @@ private:
 	string adresselivraison;
 	string adressefacturation;
 public:
-	Client(string aDatenaissance, string aFirstpurshase, string aAdresselivraison, string aAdressefacturation) {
+	Client(string aDatenaissance, string aFirstpurshase, string aAdresselivraison, string aAdressefacturation){
 		datenaissance = aDatenaissance;
 		firstpurshase = aFirstpurshase;
 		adresselivraison = aAdresselivraison;
@@ -55,11 +55,12 @@ private:
 	string prenomClient;
 	int IDclient;
 public:
+	Personne() {
+	}
 	Personne(string aNomClient, string aPrenomClient, int aID) {
 		nomClient = aNomClient;
 		prenomClient = aPrenomClient;
 		IDclient = aID;
-
 	}
 	void setnomClient(string aNomClient) {
 		nomClient = aNomClient;
@@ -93,7 +94,7 @@ public :
 	Personnel(string aSuperieur,string aDate_embauche,string aAdressePersonnel) {
 		superieur = aSuperieur;
 		date_embauche = aDate_embauche;
-		adressePersonnel = aAdressePeersonnel;
+		adressePersonnel = aAdressePersonnel;
 	}
 	void setsuperieur(string aSuperieur) {
 		superieur = aSuperieur;
@@ -174,7 +175,7 @@ public :
 	}
 
 	void setprixTVA(int aPrixTVA) {
-		prixTVA = AprixTVA;
+		prixTVA = aPrixTVA;
 	}
 	int getprixTVA() {
 		return prixTVA;
@@ -301,21 +302,17 @@ public :
 		return Articles;
 	}
 
-	void setqtArticles(string aQtArticles) {
+	void setqtArticles(int aQtArticles) {
 		qtArticles = aQtArticles;
 	}
 	int getqtArticles() {
 		return qtArticles;
 	}
 
-	void setqtArticles(string aQtArticles) {
-		qtArticles = aQtArticles;
-	}
-	int getqtArticles() {
-		return qtArticles;
-	}
+	
+	
 
-	void setachetes(string aAchetes) {
+	void setachetes(int aAchetes) {
 		achetes = aAchetes;
 	}
 	int getachetes() {
@@ -325,14 +322,14 @@ public :
 	void setdate_emission(string aDate_emission) {
 		date_emission = aDate_emission;
 	}
-	int getdate_emission() {
+	string getdate_emission() {
 		return date_emission;
 	}
 
 	void setdate_livraison(string aDate_livraison) {
 		date_livraison = aDate_livraison;
 	}
-	int getdate_livraison() {
+	string getdate_livraison() {
 		return date_livraison;
 	}
 };
@@ -350,8 +347,8 @@ public :
 		qtt = aQtt;
 	}
 	int getqtt() {
-		return qtt
+		return qtt;
 	}
 };
 }
-///// Last update 01:02 am By T0nt0n ! Telhaguhoum !
+///// Last update 09:37 30/11/2021 am By T0nt0n ! Telhaguhoum !
