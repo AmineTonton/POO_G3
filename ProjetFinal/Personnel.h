@@ -1,5 +1,8 @@
 #pragma once
 #include "SuppPersonnel.h"
+#include "AddPersonnel.h"
+#include "ModifierPersonnel.h"
+#include "ListePersonnel.h"
 
 namespace Interface {
 
@@ -11,7 +14,7 @@ namespace Interface {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de Personnel
+	/// Description rÃ©sumÃ©e de Personnel
 	/// </summary>
 	public ref class Personnel : public System::Windows::Forms::Form
 	{
@@ -26,7 +29,7 @@ namespace Interface {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisÃ©es.
 		/// </summary>
 		~Personnel()
 		{
@@ -45,14 +48,14 @@ namespace Interface {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nÃ©cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// MÃ©thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mÃ©thode avec l'Ã©diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -83,6 +86,7 @@ namespace Interface {
 			this->btn_addpersonnel->Text = L"Ajouter un personnel";
 			this->btn_addpersonnel->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->btn_addpersonnel->UseVisualStyleBackColor = false;
+			this->btn_addpersonnel->Click += gcnew System::EventHandler(this, &Personnel::btn_addpersonnel_Click);
 			// 
 			// btn_supppersonnel
 			// 
@@ -144,6 +148,7 @@ namespace Interface {
 			this->btn_listpersonnel->Text = L"Liste du personnel";
 			this->btn_listpersonnel->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->btn_listpersonnel->UseVisualStyleBackColor = false;
+			this->btn_listpersonnel->Click += gcnew System::EventHandler(this, &Personnel::btn_listpersonnel_Click);
 			// 
 			// Personnel
 			// 
@@ -168,6 +173,20 @@ namespace Interface {
 		//SUPP PERSONNEL
 		Interface::SuppPersonnel^ supppersonnelFrm = gcnew Interface::SuppPersonnel();
 		supppersonnelFrm->ShowDialog();
+	}
+		/*private: System::Void Client_Load(System::Object^ sender, System::EventArgs^ e) {
+		}*/
+	private: System::Void btn_listpersonnel_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		Interface::ListePersonnel^ listpersonnelFrm = gcnew Interface::ListePersonnel();
+		listpersonnelFrm->ShowDialog();
+
+
+	}
+	private: System::Void btn_addpersonnel_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		Interface::AddPersonnel^ addPersonnelFrm = gcnew Interface::AddPersonnel();
+		addPersonnelFrm->ShowDialog();
 	}
 };
 }
