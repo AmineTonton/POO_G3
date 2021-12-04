@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form.h">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Forms.cpp">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="SQL.h">
+      <UniqueIdentifier>{5eb810d3-2051-41ed-9e58-44ebbdef89e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL.cpp">
+      <UniqueIdentifier>{f426a43a-3a81-4153-ba55-d2b765fb1ec2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Personnel.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="MonEspace.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Comptabilite.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Commande.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Catalogue.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Accueil.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AddClient.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SuppClient.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CAD.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Assemblyinfo.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="MAP.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceClient.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ListeClient.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AddArticle.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ListeArticle.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AddPersonnel.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SuppPersonnel.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ModifierPersonnel.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ModifierArticle.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ListePersonnel.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Facture.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AddCommande.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SuppCommande.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ListeCommande.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ProduitManquant.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Connexion.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServicesVille.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceArticle.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServicesPersonnel.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServicesCommande.cpp">
+      <Filter>SQL.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SuppArticle.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Top10.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Moinsvendus.cpp">
+      <Filter>Forms.cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyForm.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Catalogue.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Accueil.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Comptabilite.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Commande.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="MonEspace.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="AddClient.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="SuppClient.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="CAD.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="MAP.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Ressource.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServicesClient.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ListeClient.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="AddArticle.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ListeArticle.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ModifierArticle.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="AddPersonnel.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ModifierPersonnel.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="SuppPersonnel.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ListePersonnel.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Facture.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="AddCommande.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="SuppCommande.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ListeCommande.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ProduitManquant.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Connexion.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServicesVille.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServicesArticle.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServicesPersonnel.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServicesCommande.h">
+      <Filter>SQL.h</Filter>
+    </ClInclude>
+    <ClInclude Include="SuppArticle.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Top10.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Moinsvendus.h">
+      <Filter>Form.h</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

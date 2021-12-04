@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{D81473A3-D73E-4A88-A396-537BC54F7519}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>Interface</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Accueil.cpp" />
+    <ClCompile Include="AddArticle.cpp" />
+    <ClCompile Include="AddClient.cpp" />
+    <ClCompile Include="AddCommande.cpp" />
+    <ClCompile Include="AddPersonnel.cpp" />
+    <ClCompile Include="Assemblyinfo.cpp" />
+    <ClCompile Include="CAD.cpp" />
+    <ClCompile Include="Catalogue.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Commande.cpp" />
+    <ClCompile Include="Comptabilite.cpp" />
+    <ClCompile Include="Connexion.cpp" />
+    <ClCompile Include="Facture.cpp" />
+    <ClCompile Include="ListeArticle.cpp" />
+    <ClCompile Include="ListeClient.cpp" />
+    <ClCompile Include="ListeCommande.cpp" />
+    <ClCompile Include="ListePersonnel.cpp" />
+    <ClCompile Include="MAP.cpp" />
+    <ClCompile Include="ModifierArticle.cpp" />
+    <ClCompile Include="ModifierPersonnel.cpp" />
+    <ClCompile Include="Moinsvendus.cpp" />
+    <ClCompile Include="MonEspace.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="ProduitManquant.cpp" />
+    <ClCompile Include="ServiceArticle.cpp" />
+    <ClCompile Include="ServiceClient.cpp" />
+    <ClCompile Include="ServicesCommande.cpp" />
+    <ClCompile Include="ServicesPersonnel.cpp" />
+    <ClCompile Include="ServicesVille.cpp" />
+    <ClCompile Include="SuppArticle.cpp" />
+    <ClCompile Include="SuppClient.cpp" />
+    <ClCompile Include="SuppCommande.cpp" />
+    <ClCompile Include="SuppPersonnel.cpp" />
+    <ClCompile Include="Top10.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Accueil.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddArticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CAD.h" />
+    <ClInclude Include="Catalogue.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Commande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Comptabilite.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Connexion.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Facture.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ListeArticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ListeClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ListeCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ListePersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MAP.h" />
+    <ClInclude Include="ModifierArticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModifierPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Moinsvendus.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MonEspace.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Personnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ProduitManquant.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Ressource.h" />
+    <ClInclude Include="ServicesArticle.h" />
+    <ClInclude Include="ServicesClient.h" />
+    <ClInclude Include="ServicesCommande.h" />
+    <ClInclude Include="ServicesPersonnel.h" />
+    <ClInclude Include="ServicesVille.h" />
+    <ClInclude Include="SuppArticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SuppClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SuppCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SuppPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Top10.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddArticle.resx">
+      <DependentUpon>AddArticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddClient.resx">
+      <DependentUpon>AddClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCommande.resx">
+      <DependentUpon>AddCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPersonnel.resx">
+      <DependentUpon>AddPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogue.resx">
+      <DependentUpon>Catalogue.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commande.resx">
+      <DependentUpon>Commande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabilite.resx">
+      <DependentUpon>Comptabilite.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connexion.resx">
+      <DependentUpon>Connexion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facture.resx">
+      <DependentUpon>Facture.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeArticle.resx">
+      <DependentUpon>ListeArticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeClient.resx">
+      <DependentUpon>ListeClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeCommande.resx">
+      <DependentUpon>ListeCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListePersonnel.resx">
+      <DependentUpon>ListePersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierArticle.resx">
+      <DependentUpon>ModifierArticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierPersonnel.resx">
+      <DependentUpon>ModifierPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moinsvendus.resx">
+      <DependentUpon>Moinsvendus.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonEspace.resx">
+      <DependentUpon>MonEspace.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personnel.resx">
+      <DependentUpon>Personnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProduitManquant.resx">
+      <DependentUpon>ProduitManquant.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuppArticle.resx">
+      <DependentUpon>SuppArticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuppClient.resx">
+      <DependentUpon>SuppClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuppCommande.resx">
+      <DependentUpon>SuppCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuppPersonnel.resx">
+      <DependentUpon>SuppPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top10.resx">
+      <DependentUpon>Top10.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
