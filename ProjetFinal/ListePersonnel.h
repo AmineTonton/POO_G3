@@ -8,9 +8,10 @@ namespace Interface {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::SqlClient;
 
 	/// <summary>
-	/// Description résumée de ListePersonnel
+	/// Description rÃ©sumÃ©e de ListePersonnel
 	/// </summary>
 	public ref class ListePersonnel : public System::Windows::Forms::Form
 	{
@@ -33,7 +34,7 @@ namespace Interface {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisÃ©es.
 		/// </summary>
 		~ListePersonnel()
 		{
@@ -48,14 +49,14 @@ namespace Interface {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nÃ©cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// MÃ©thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mÃ©thode avec l'Ã©diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -122,6 +123,7 @@ namespace Interface {
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->Size = System::Drawing::Size(771, 341);
 			this->dataGridView1->TabIndex = 25;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ListePersonnel::dataGridView1_CellContentClick);
 			// 
 			// ListePersonnel
 			// 
@@ -175,5 +177,39 @@ namespace Interface {
 	{
 		dragFormMouseMove(sender, e);
 	}
-	};
+
+		   /////
+
+		   private: System::Void buttonactualiser_Click(System::Object^ sender, System::EventArgs^ e) {
+
+			   String^ constring = "Data Source=DESKTOP-FB31OJA;Initial Catalog=PROJET_POO2;User ID=tonton;Password=1999";
+			   SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+			   SqlCommand^ cmdDataBase = gcnew SqlCommand("select * from Personnel ", conDataBase);
+			   conDataBase->Open();
+			   SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
+
+			   dataGridView1->Rows->Clear();
+			   while (myReader->Read())
+			   {
+				   dataGridView1->Rows->Add(myReader[0], myReader[1], myReader[2], myReader[3], myReader[4], myReader[5], myReader[6], myReader[7]);
+			   }
+			   conDataBase->Close();
+		   }
+	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
+private: System::Void ListePersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
+	String^ constring = "Data Source=DESKTOP-FB31OJA;Initial Catalog=PROJET_POO2;User ID=tonton;Password=1999";
+	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+	SqlCommand^ cmdDataBase = gcnew SqlCommand("select * from Personnel ", conDataBase);
+	conDataBase->Open();
+	SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
+
+	dataGridView1->Rows->Clear();
+	while (myReader->Read())
+	{
+		dataGridView1->Rows->Add(myReader[0], myReader[1], myReader[2], myReader[3], myReader[4], myReader[5], myReader[6], myReader[7]);
+	}
+	conDataBase->Close();
+}
+};
 }
