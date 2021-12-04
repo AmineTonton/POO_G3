@@ -1,0 +1,182 @@
+/*------------------------------------------------------------
+*        Script SQLSERVER 
+------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------
+-- Table: Client
+------------------------------------------------------------*/
+CREATE TABLE Client(
+	Id_Client        INT IDENTITY (1,1) NOT NULL ,
+	Nom_Client       VARCHAR (50) NOT NULL ,
+	Prenom_Client    VARCHAR (50) NOT NULL ,
+	Date_Naissance   DATE NOT NULL ,
+	Tel_Client       INT  NOT NULL ,
+	Email_Client     VARCHAR (50) NOT NULL  ,
+	CONSTRAINT Client_PK PRIMARY KEY (Id_Client)
+);
+
+
+/*------------------------------------------------------------
+-- Table: Commande
+------------------------------------------------------------*/
+CREATE TABLE Commande(
+	id_commande     INT IDENTITY (1,1) NOT NULL ,
+	RefCommande     VARCHAR (50) NOT NULL ,
+	DateEmission    DATE NOT NULL ,
+	DateLivraison   DATE NOT NULL ,
+	NbArticles      INT  NOT NULL ,
+	DateCommande    DATE NOT NULL ,
+	Id_Client       INT  NOT NULL  ,
+	CONSTRAINT Commande_PK PRIMARY KEY (id_commande)
+);
+
+
+/*------------------------------------------------------------
+-- Table: Adresse
+------------------------------------------------------------*/
+CREATE TABLE Adresse(
+	id_Adresse       INT IDENTITY (1,1) NOT NULL ,
+	AdressePostale   VARCHAR (50) NOT NULL ,
+	Rue              VARCHAR (50) NOT NULL ,
+	Ville            VARCHAR (50) CHECK (Ville IN ('Blida','Boumerdes','Tisemsilet','Alger','Tamenrasset','Tindouf','Adrar','Gherdaïa'))  ,
+	NomResidence     VARCHAR (50) NOT NULL ,
+	Etage            INT  NOT NULL  ,
+	CONSTRAINT Adresse_PK PRIMARY KEY (id_Adresse)
+);
+
+
+/*------------------------------------------------------------
+-- Table: Stock
+------------------------------------------------------------*/
+CREATE TABLE Stock(
+	Id_Article      INT IDENTITY (1,1) NOT NULL ,
+	RefArticle      VARCHAR (50) NOT NULL ,
+	Designation     VARCHAR (50) NOT NULL ,
+	NatureArticle   VARCHAR (50) CHECK (NatureArticle IN ('Test & Mesure','Arduino & Robotique','Control','Carte Interfaces','Soudage & Dessoudage'))  ,
+	Couleur         VARCHAR (50) NOT NULL ,
+	PrixHT          MONEY  NOT NULL ,
+	QttStock        VARCHAR (50) NOT NULL ,
+	SeuilReapp      FLOAT  NOT NULL  ,
+	CONSTRAINT Stock_PK PRIMARY KEY (Id_Article)
+);
+
+
+/*------------------------------------------------------------
+-- Table: Tranche
+------------------------------------------------------------*/
+CREATE TABLE Tranche(
+	Id_Tranche    INT IDENTITY (1,1) NOT NULL ,
+	Mode          VARCHAR (50) CHECK (Mode IN ('Chèque','Versement','Cash','Visa'))  ,
+	Somme         FLOAT  NOT NULL ,
+	Date          DATE NOT NULL ,
+	id_commande   INT  NOT NULL ,
+	Id_Client     INT  NOT NULL  ,
+	CONSTRAINT Tranche_PK PRIMARY KEY (Id_Tranche)
+);
+
+
+/*------------------------------------------------------------
+-- Table: Livraison
+------------------------------------------------------------*/
+CREATE TABLE Livraison(
+	Id_Client    INT  NOT NULL ,
+	id_Adresse   INT  NOT NULL  ,
+	CONSTRAINT Livraison_PK PRIMARY KEY (Id_Client,id_Adresse)
+);
+
+
+/*------------------------------------------------------------
+-- Table: Facturation
+------------------------------------------------------------*/
+CREATE TABLE Facturation(
+	id_Adresse   INT  NOT NULL ,
+	Id_Client    INT  NOT NULL  ,
+	CONSTRAINT Facturation_PK PRIMARY KEY (id_Adresse,Id_Client)
+);
+
+
+/*------------------------------------------------------------
+-- Table: Contient
+------------------------------------------------------------*/
+CREATE TABLE Contient(
+	Id_Article    INT  NOT NULL ,
+	id_commande   INT  NOT NULL ,
+	QTT           INT  NOT NULL  ,
+	CONSTRAINT Contient_PK PRIMARY KEY (Id_Article,id_commande)
+);
+
+
+/*------------------------------------------------------------
+-- Table: Personnel
+------------------------------------------------------------*/
+CREATE TABLE Personnel(
+	Id_Personnel             INT IDENTITY (1,1) NOT NULL ,
+	NomPersonnel             VARCHAR (50) NOT NULL ,
+	PrenomPersonnel          VARCHAR (50) NOT NULL ,
+	TelPersonnel             INT  NOT NULL ,
+	EmailPersonnel           VARCHAR (50) NOT NULL ,
+	DateEmbauche             DATE NOT NULL ,
+	TitrePersonnel           VARCHAR (50) NOT NULL ,
+	id_Adresse               INT  NOT NULL ,
+	Id_Personnel_Supervise   INT    ,
+	CONSTRAINT Personnel_PK PRIMARY KEY (Id_Personnel)
+);
+
+
+
+
+ALTER TABLE Commande
+	ADD CONSTRAINT Commande_Client0_FK
+	FOREIGN KEY (Id_Client)
+	REFERENCES Client(Id_Client);
+
+ALTER TABLE Tranche
+	ADD CONSTRAINT Tranche_Commande0_FK
+	FOREIGN KEY (id_commande)
+	REFERENCES Commande(id_commande);
+
+ALTER TABLE Tranche
+	ADD CONSTRAINT Tranche_Client1_FK
+	FOREIGN KEY (Id_Client)
+	REFERENCES Client(Id_Client);
+
+ALTER TABLE Livraison
+	ADD CONSTRAINT Livraison_Client0_FK
+	FOREIGN KEY (Id_Client)
+	REFERENCES Client(Id_Client);
+
+ALTER TABLE Livraison
+	ADD CONSTRAINT Livraison_Adresse1_FK
+	FOREIGN KEY (id_Adresse)
+	REFERENCES Adresse(id_Adresse);
+
+ALTER TABLE Facturation
+	ADD CONSTRAINT Facturation_Adresse0_FK
+	FOREIGN KEY (id_Adresse)
+	REFERENCES Adresse(id_Adresse);
+
+ALTER TABLE Facturation
+	ADD CONSTRAINT Facturation_Client1_FK
+	FOREIGN KEY (Id_Client)
+	REFERENCES Client(Id_Client);
+
+ALTER TABLE Contient
+	ADD CONSTRAINT Contient_Stock0_FK
+	FOREIGN KEY (Id_Article)
+	REFERENCES Stock(Id_Article);
+
+ALTER TABLE Contient
+	ADD CONSTRAINT Contient_Commande1_FK
+	FOREIGN KEY (id_commande)
+	REFERENCES Commande(id_commande);
+
+ALTER TABLE Personnel
+	ADD CONSTRAINT Personnel_Adresse0_FK
+	FOREIGN KEY (id_Adresse)
+	REFERENCES Adresse(id_Adresse);
+
+ALTER TABLE Personnel
+	ADD CONSTRAINT Personnel_Personnel1_FK
+	FOREIGN KEY (Id_Personnel_Supervise)
+	REFERENCES Personnel(Id_Personnel);
