@@ -266,6 +266,92 @@ public :
 	}*/
 
 };
+/// <summary>
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////
+/// </summary>
+class Commandes{
+private :
+	string refArticle;
+	string Articles;
+	int qtArticles;
+	int achetes;
+	string date_emission;
+	string date_livraison;
+public :
+	Commandes(string aRefArticle,string aArticles,int aQtArticles,int aAchetes,string aDate_emission,string aDate_livraison) {
+		refArticle = aRefArticle;
+		Articles = aArticles;
+		qtArticles = aQtArticles;
+		achetes = aAchetes;
+		date_emission = aDate_emission;
+		date_livraison = aDate_livraison;
+	}
 
+	void setrefArticle(string aRefArticle) {
+		refArticle = aRefArticle;
+	}
+	string getrefArticle() {
+		return refArticle;
+	}
 
+	void setArticles(string aArticles) {
+		Articles = aArticles;
+	}
+	string getArticles() {
+		return Articles;
+	}
+
+	void setqtArticles(string aQtArticles) {
+		qtArticles = aQtArticles;
+	}
+	int getqtArticles() {
+		return qtArticles;
+	}
+
+	void setqtArticles(string aQtArticles) {
+		qtArticles = aQtArticles;
+	}
+	int getqtArticles() {
+		return qtArticles;
+	}
+
+	void setachetes(string aAchetes) {
+		achetes = aAchetes;
+	}
+	int getachetes() {
+		return achetes;
+	}
+
+	void setdate_emission(string aDate_emission) {
+		date_emission = aDate_emission;
+	}
+	int getdate_emission() {
+		return date_emission;
+	}
+
+	void setdate_livraison(string aDate_livraison) {
+		date_livraison = aDate_livraison;
+	}
+	int getdate_livraison() {
+		return date_livraison;
+	}
+};
+/// <summary>
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////
+/// </summary>
+class Stock {
+	int qtt;
+public :
+	Stock(int aQtt) {
+		qtt = aQtt;
+	}
+	
+	void setqtt(int aQtt) {
+		qtt = aQtt;
+	}
+	int getqtt() {
+		return qtt
+	}
+};
 }
+///// Last update 01:02 am By T0nt0n ! Telhaguhoum !
